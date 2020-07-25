@@ -1,0 +1,17 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ecf31c4a..9e188929 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -298,9 +298,9 @@ add_subdirectory(tddb)
+ 
+ add_subdirectory(test)
+ 
+-if (NOT CMAKE_CROSSCOMPILING)
+-  add_subdirectory(benchmark)
+-endif()
++# if (NOT CMAKE_CROSSCOMPILING)
++#   add_subdirectory(benchmark)
++# endif()
+ 
+ 
+ get_directory_property(HAS_PARENT PARENT_DIRECTORY)

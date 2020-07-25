@@ -1,0 +1,31 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ecf31c4a..6c4bf809 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -21,16 +21,16 @@ endif()
+ get_filename_component(TD_REAL_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}" REALPATH)
+ get_filename_component(TD_REAL_BINARY_DIR "${CMAKE_CURRENT_BINARY_DIR}" REALPATH)
+ 
+-if (TD_REAL_BINARY_DIR STREQUAL TD_REAL_SOURCE_DIR)
+-  message("  Out-of-source build should be used to build TDLib.")
+-  message("  You need to remove the files already created by CMake and")
+-  message("  rerun CMake from a new directory:")
+-  message("  rm -rf CMakeFiles CMakeCache.txt")
+-  message("  mkdir build")
+-  message("  cd build")
+-  message("  cmake ..")
+-  message(FATAL_ERROR "In-source build failed.")
+-endif()
++# if (TD_REAL_BINARY_DIR STREQUAL TD_REAL_SOURCE_DIR)
++#   message("  Out-of-source build should be used to build TDLib.")
++#   message("  You need to remove the files already created by CMake and")
++#   message("  rerun CMake from a new directory:")
++#   message("  rm -rf CMakeFiles CMakeCache.txt")
++#   message("  mkdir build")
++#   message("  cd build")
++#   message("  cmake ..")
++#   message(FATAL_ERROR "In-source build failed.")
++# endif()
+ 
+ option(TD_ENABLE_JNI "Use \"ON\" to enable JNI-compatible TDLib API.")
+ option(TD_ENABLE_DOTNET "Use \"ON\" to enable generation of C++/CLI or C++/CX TDLib API bindings.")
